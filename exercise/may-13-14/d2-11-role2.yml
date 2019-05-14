@@ -1,0 +1,8 @@
+---
+- hosts:
+  - webservers
+  roles:
+  - sree.web1
+  - sree.demo1
+  - geerlingguy.git
+

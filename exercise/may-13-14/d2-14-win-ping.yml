@@ -1,0 +1,6 @@
+---
+- hosts:
+  - win
+  tasks:
+  - action: win_ping
+

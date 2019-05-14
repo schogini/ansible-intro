@@ -1,0 +1,5 @@
+- name: Restart Apache 1234
+  service: name=apache2 state=restarted
+
+- name: Restart Apache 5678
+  service: name=httpd state=restarted

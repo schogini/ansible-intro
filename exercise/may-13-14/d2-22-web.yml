@@ -1,0 +1,22 @@
+---
+- hosts:
+   - ubuntu1
+  roles:
+   - sree.web1
+   - geerlingguy.git
+
+  tasks:
+  - name: Delete html folder
+    file:  path=/var/www/html state=absent
+
+
+  - name: Clone a Production Web Application
+    git:
+     repo: https://github.com/schogini/customweb.git
+     dest: /var/www/html
+
+  - name: Replace lines
+    replace:
+      path: /var/www/html/index.html
+      regexp: 'Sreeprakash Neelakantan'
+      replace: 'ABCD'

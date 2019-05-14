@@ -1,0 +1,26 @@
+ubuntu1 ansible_host=172.18.0.6
+
+[deb]
+ubuntu1
+172.18.0.3
+
+[rpm]
+172.18.0.2 disk=1TB type=SSD
+172.18.0.5 disk=5TB type=MAGNETIC speed=3600rpm
+
+[dbservers]
+172.18.0.6
+172.18.0.2
+
+[webservers]
+172.18.0.3
+172.18.0.5
+
+[win]
+18.206.135.176
+
+
+[rpm:vars]
+type=OPTI
+#cpu=8 Cores
+

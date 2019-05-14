@@ -1,0 +1,5 @@
+- name: Play with tags
+  hosts: all
+  gather_facts: false
+  tasks:
+    - debug: var=sample1

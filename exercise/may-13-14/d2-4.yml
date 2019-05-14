@@ -1,0 +1,13 @@
+---
+- hosts:
+  - all
+  tasks:
+  - apt: 
+     name: tree
+     state: present
+    when: ansible_os_family == "Debian"
+  - yum: 
+     name: tree
+     state: present
+    when: ansible_os_family == "RedHat"
+

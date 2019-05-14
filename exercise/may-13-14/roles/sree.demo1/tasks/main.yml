@@ -1,0 +1,5 @@
+- name: Demo Role
+  copy:
+   content: ABCD
+   dest: /day2.txt
+

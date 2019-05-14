@@ -1,0 +1,7 @@
+---
+- hosts:
+  - rpm
+  tasks:
+  - debug:
+      msg: CPU = {{ cpu }}
+

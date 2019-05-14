@@ -1,0 +1,20 @@
+---
+- hosts:
+  - deb
+  tasks:
+  - name: INSTALL WEB SERVER
+    apt:
+     name: apache2
+     update_cache: yes
+     state: present
+
+  - name: START WEB SERVER
+    service:
+     name: apache2
+     state: restarted
+
+  - name: CREATE MY WEBSITE AT /var/www/html/index.html
+    copy: 
+      content: I AM SREE on {{ ansible_os_family }} 
+      dest: /var/www/html/index.html
+

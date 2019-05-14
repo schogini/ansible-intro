@@ -1,0 +1,35 @@
+---
+- hosts:
+  - rpm
+  tasks:
+  - name: INSTALL WEB SERVER USING APT
+    apt:
+     name: apache2
+     update_cache: yes
+     state: present
+    when: ansible_os_family == "Debian"
+
+  - name: INSTALL WEB SERVER USING YUM
+    yum:
+     name: httpd
+     update_cache: yes
+     state: present
+    when: ansible_os_family == "RedHat"
+
+  - name: START WEB SERVER - DEBIAN 
+    service:
+     name: apache2
+     state: restarted
+    when: ansible_os_family == "Debian"
+
+  - name: START WEB SERVER - REDHAT
+    service:
+     name: httpd
+     state: restarted
+    when: ansible_os_family == "RedHat"
+
+  - name: CREATE MY WEBSITE AT /var/www/html/index.html
+    copy: 
+      content: I AM SREE on {{ ansible_os_family }} 
+      dest: /var/www/html/index.html
+

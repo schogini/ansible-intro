@@ -1,0 +1,15 @@
+---
+- hosts:
+  - deb
+  tasks:
+  - apt: 
+     name: tree
+     state: absent
+
+- hosts:
+  - rpm
+  tasks:
+  - yum: 
+     name: tree
+     state: absent
+

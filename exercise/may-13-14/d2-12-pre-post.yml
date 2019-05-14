@@ -1,0 +1,21 @@
+---
+- hosts:
+  - localhost
+  gather_facts: no
+  connection: local
+
+  post_tasks:
+  - debug:
+     msg: "Task Post.."
+
+  tasks:
+  - debug:
+     msg: "Task A"
+  - debug:
+     msg: "Task B"
+  - debug:
+     msg: "Task C"
+
+  pre_tasks:
+  - debug:
+     msg: "Task Pre"

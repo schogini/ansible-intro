@@ -1,0 +1,9 @@
+- hosts:
+  - all
+  gather_facts: no
+
+  tasks:
+  - debug:
+     msg: OS FAMILY 
+#= {{ ansible_os_family }} PACKAGE MANAGER = {{ ansible_pkg_mgr }}
+

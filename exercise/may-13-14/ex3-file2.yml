@@ -1,0 +1,10 @@
+---
+- hosts:
+  - deb
+  tasks:
+  - name: My Custom File Creation
+    copy:
+      src: my-local-file.txt
+      dest: /sree1.txt
+
+

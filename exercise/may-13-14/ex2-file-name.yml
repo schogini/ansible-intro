@@ -1,0 +1,28 @@
+---
+- name: MY FILE CREATION EXAMPLE
+  hosts:
+  - deb
+  tasks:
+  - name: CREATING /sree2.txt FILE....
+    file:
+      dest: /sree2.txt
+      state: touch
+  - name: DELETEING /sree1.txt FILE....
+    file:
+      dest: /sree1.txt
+      state: absent
+
+- name: SECOND PLAY FOR FILE CREATIONs
+  hosts:
+  - deb
+  tasks:
+  - name: CREATING /sree3.txt FILE....
+    file:
+      dest: /sree2.txt
+      state: touch
+  - name: DELETEING /sree31.txt FILE....
+    file:
+      dest: /sree1.txt
+      state: absent
+
+

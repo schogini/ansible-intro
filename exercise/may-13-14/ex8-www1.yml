@@ -1,0 +1,15 @@
+---
+- hosts:
+  - deb
+  tasks:
+  - name: INSTALL WEB SERVER
+    apt:
+     name: apache2
+     update_cache: yes
+     state: present
+
+  - name: START WEB SERVER
+    service:
+     name: apache2
+     state: restarted
+

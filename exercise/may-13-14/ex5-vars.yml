@@ -1,0 +1,13 @@
+---
+- hosts: 
+   - rpm
+  vars:
+   aaa: 123
+  tasks:
+  - debug: 
+      var: aaa
+
+  - debug: 
+      msg: DISK {{ disk }} TYPE {{ type }} SPEED {{ speed }} AAA {{ aaa }}
+
+

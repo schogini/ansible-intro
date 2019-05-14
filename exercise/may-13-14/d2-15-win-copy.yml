@@ -1,0 +1,6 @@
+- hosts: win
+  tasks:
+  - win_copy:
+      content: "Hello from Sree"
+      dest: c:\sree.txt
+

@@ -1,0 +1,17 @@
+---
+- hosts: [ rpm, deb ]
+  vars:
+   aaa: >
+    aaaaaaa
+    123
+    bbbbbbbb
+    cccccc
+
+  tasks:
+  - copy: { content: "{{ aaa }}", dest: /sree1.txt }
+
+#  - copy: 
+#      content: "{{ aaa }}"
+#      dest: /sree1.txt
+
+

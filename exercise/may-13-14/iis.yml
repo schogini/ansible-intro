@@ -1,0 +1,12 @@
+---
+- hosts: win
+  tasks:
+  - name: Install IIS - Webserver
+    win_feature:
+     name: Web-Server
+     state: present
+
+  - name: Web Page
+    win_copy:
+     dest: c:\Inetpub\wwwroot\sree.htm
+     content: '<h1>Hello from Sree'

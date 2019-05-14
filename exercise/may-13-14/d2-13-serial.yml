@@ -1,0 +1,6 @@
+- hosts: 
+    - webservers
+  serial: 1
+
+  tasks:
+   - debug: msg="Doing A" 

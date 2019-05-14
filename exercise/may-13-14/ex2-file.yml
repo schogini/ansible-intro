@@ -1,0 +1,9 @@
+---
+- hosts:
+  - deb
+  tasks:
+  - file:
+      dest: /sree2.txt
+      state: touch
+
+

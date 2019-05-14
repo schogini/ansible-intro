@@ -1,0 +1,24 @@
+---
+- hosts:
+  - ubuntu1
+  tasks:
+  - name: Task A
+    debug: msg="Task message from A..."
+#    changed_when: true
+    notify: Handler A1
+
+  - name: Task B
+    debug: msg="Task message from B..."
+    changed_when: true
+    notify: Handler A1
+
+  - name: Task C
+    debug: msg="Task message from C..."
+    changed_when: true
+    notify: Handler A1
+
+  handlers:
+  - name: Handler A1
+    debug: msg="Handler message from A1..."
+
+

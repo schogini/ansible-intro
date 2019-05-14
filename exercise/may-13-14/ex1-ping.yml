@@ -1,0 +1,7 @@
+---
+- hosts: deb
+
+  tasks:
+    - action: ping
+
+

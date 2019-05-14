@@ -1,0 +1,12 @@
+- hosts:
+  - rpm
+  tasks:
+  - name: SHELL COMMAND EXPERIMENT
+    shell: date > /file1.txt
+    register: my_var
+
+
+  - name: MY VAR OUTPUT
+    debug:
+     var: my_var.stdout_lines
+

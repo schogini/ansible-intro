@@ -1,0 +1,12 @@
+- name: Play with tags
+  hosts: localhost
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: Going to play
+      debug: msg="Playing.."
+      tags: play
+
+    - name: Going to study
+      debug: msg="Studying.."
+      tags: study

@@ -1,0 +1,16 @@
+- hosts: ubuntu1
+  gather_facts: no
+  tasks:
+    - name: File command
+      file:
+       state: touch
+       dest: /file2.txt
+
+    - name: Shell command
+      shell: ls /
+      register: a
+
+    - name: Unit Testing
+      assert:
+       that:
+        - "'file2.txt' in a.stdout_lines"
